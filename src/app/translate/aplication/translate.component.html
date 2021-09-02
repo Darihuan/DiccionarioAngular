@@ -1,0 +1,21 @@
+<div class="translateGrid">
+  <div>
+    <h1 class="subtitle">Translate</h1>
+  </div>
+  <div class="workArea">
+    <div>
+      <textarea id="textArea" name="textInput" cols="100" rows="8" class="textTranslate input" [(ngModel)]="entrada"></textarea>
+      <h3>{{this.espanol ? "Español" : "Inglés"}}</h3>
+    </div>
+    <div>
+      <mat-icon class="icons" (click)="this.changeLanguage()">compare_arrows</mat-icon>
+    </div>
+    <div>
+      <textarea name="textInput" cols="100" rows="8" class="textTranslate input">{{this.traduccion}}</textarea>
+      <h3>{{this.espanol ? "Inglés" : "Español"}}</h3>
+      <mat-icon class="icons" (click)="copiar()">file_copy</mat-icon>
+    </div>
+  </div>
+
+
+</div>

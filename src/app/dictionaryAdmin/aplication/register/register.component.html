@@ -1,0 +1,29 @@
+<div class="centrar">
+  <div >
+
+    <h2 class="subtitle">{{this.registerForm?"Register new User:":"Login User:"}}</h2>
+    <form [formGroup]="userForm" class="formulario">
+      <div>
+        <label for="email" class="form-label">User email:</label>
+        <input class="entradatexto" type="text" id="email" required placeholder="email" formControlName="email">
+      </div>
+      <div>
+        <label for="password" class="form-label">Password:</label>
+        <input class="entradatexto" type="password" id="password" required placeholder="password"
+               formControlName="pass">
+      </div>
+      <div>
+        <button *ngIf="registerForm else login" class="boton" (click)="register()">Register</button>
+      </div>
+
+
+      <ng-template #login>
+        <div>
+          <button class="boton" (click)="checkData()">Login</button>
+        </div>
+
+      </ng-template>
+    </form>
+
+  </div>
+</div>

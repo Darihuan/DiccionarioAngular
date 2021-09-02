@@ -1,0 +1,25 @@
+<div>
+  <nav class=" navegacion">
+    <div><h1 class="title" [routerLink]="'/'">Dictionary</h1></div>
+    <div>
+      <ul class="funtions">
+        <li>
+          <input type="text" class="search" id="search"><mat-icon>search</mat-icon>
+        </li>
+        <li>
+          <mat-icon class="icons" [routerLink]="'register'"> person_pin</mat-icon>
+        </li>
+        <li>
+          <mat-icon class="icons">library_books</mat-icon>
+        </li>
+        <li>
+          <mat-icon class="icons">exit_to_app</mat-icon>
+        </li>
+        <li>
+          <mat-icon class="icons" (click)="darkmode()">tonality</mat-icon>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+</div>
